@@ -1,4 +1,4 @@
-#include "linkedList.h"
+#include "linkedList/linkedList.h"
 
 int main(){
 
@@ -35,6 +35,7 @@ int main(){
 	list.delete_value(1);
 	cout << "Imprimo " << endl;
 	list.print_list();
+	cout << list.find(4) << endl;
 
 	return 0;
 }

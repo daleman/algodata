@@ -30,18 +30,11 @@ void linked_list::insert_value(int value){
 	node* new_node = new node;
 	new_node->data= value;
 	
-	// always my new_node is the first one
-
-	// empty list my new node points to nullptr
-		if(this->first_node == nullptr){
-		new_node->next_node = nullptr ;		
-		this->first_node = new_node;		
-	}else{
-	// no empty list case: my new_node points to the old first node
+	// always my new_node is the first one and points to the old first
+	
 		node* old_first_node = this->first_node;
 		new_node->next_node = old_first_node;		
 		this->first_node = new_node;		
-	}
 	
 }
 
@@ -114,4 +107,51 @@ void linked_list::print_list(){
 	cout << "NULL" << endl;
 	}
 }
+
+node* linked_list::find(int value){
+	if(is_empty()){
+		return nullptr;
+	}
+	
+	node* current_node = first_node;
+	
+	while(!is_final_node(current_node)){
+		if(current_node->data == value){
+			return current_node;
+		}
+		current_node = current_node->next_node;
+	}
+	
+	return nullptr;
+		
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
