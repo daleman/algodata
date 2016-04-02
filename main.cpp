@@ -1,8 +1,10 @@
 #include "linkedList/linkedList.h"
+#include <iostream>
+using namespace std;
 
 int main(){
 
-	linked_list list ;
+	linked_list<int> list ;
 	list.print_list();
 	cout << "Inserto el 2 " << endl;
 	list.insert_value(2);
@@ -31,6 +33,7 @@ int main(){
 	list.insert_value(1);
 	cout << "Imprimo " << endl;
 	list.print_list();
+	cout << "Final" << endl;
 	cout << "Borro los 1 " << endl;
 	list.delete_value(1);
 	cout << "Imprimo " << endl;
